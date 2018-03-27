@@ -1,10 +1,6 @@
 ﻿@charset "utf-8";
 /* CSS Document */
-/***
- * uimaker
- * http://www.uimaker.com
- * e-mail: admin@uimaker.com
- */
+
 *{font-size:9pt;border:0;margin:0;padding:0;}
 body{font-family:'微软雅黑'; margin:0 auto;min-width:980px;}
 ul{display:block;margin:0;padding:0;list-style:none;}
@@ -41,7 +37,7 @@ h2{font-weight:normal;}
 .loginbox ul li label a:hover{color:#f0580c;}
 .loginbox ul li label input{margin-right:5px;}
 .loginbox,.loginbox1,.loginbox2,.loginbox3,.loginbox4{width:692px; height:373px;margin-top:30px;}
-.loginuser{width:299px; height:48px; background:url(../images/loginuser.png) no-repeat; border:none; line-height:48px; padding-left:44px; font-size:14px; font-weight:bold;}
+.loginuser{width:299px; height:48px; background:url(../images/loginuser.png) no-repeat; border:none; line-height:80px; padding-left:44px; font-size:14px; font-weight:bold;}
 .loginpwd{width:299px; height:48px; background:url(../images/loginpassword.png) no-repeat; border:none;line-height:48px; padding-left:44px; font-size:14px; color:#de9852;}
 .loginbtn{width:111px;height:35px; background:url(../images/buttonbg.png) repeat-x; font-size:14px; font-weight:bold; color:#fff;cursor:pointer; line-height:35px;}
 .loginbm{height:50px; line-height:50px; text-align:center; background:url(../images/loginbg2.png) repeat-x;position:absolute; bottom:0; width:100%; color:#fff8f5;}

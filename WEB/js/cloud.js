@@ -3,6 +3,7 @@
     var $main = $cloud = mainwidth = null;
     var offset1 = 450;
 	var offset2 = 0;
+    var offset3 = 120;
 	
 	var offsetbg = 0;
     
@@ -12,6 +13,7 @@
 			$body = $("body");
             $cloud1 = $("#cloud1");
 			$cloud2 = $("#cloud2");
+            $cloud3 = $("#cloud3");
 			
             mainwidth = $main.outerWidth();
          
@@ -27,12 +29,19 @@
         if (offset2 >= mainwidth) {
 			 offset2 =  -580;
         }
+
+        if (offset3 >= mainwidth) {
+             offset3 =  -580;
+        }
 		
         offset1 += 1.1;
 		offset2 += 1;
+        offset3 += 3;
         $cloud1.css("background-position", offset1 + "px 100px")
 		
 		$cloud2.css("background-position", offset2 + "px 460px")
+
+        $cloud3.css("background-position", offset3 + "px 460px")
     }, 70);
 	
 	

@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
 <html>
 <head>
   <meta charset="utf-8">
@@ -18,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
         <style type="text/css">
-          body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+          body, html,#allmap {width: 100%;height: 850px;overflow: hidden;margin:0;font-family:"微软雅黑";}
           </style>
           <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pWn9b8IKhbpS9dUwC9T1Cy3PVU5zNnaX"></script>
 </head>
@@ -33,16 +29,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <span class="logo-lg"><b>防汛自动监测系统</b></span>
     </a>
 
-    <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
-      <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
-      <!-- Navbar Right Menu -->
+      <!-- 左侧面板 -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <!-- 信息查询 -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -62,17 +55,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <i class="fa fa-flag-o"></i>&nbsp;信息管理
             </a>
           </li>
-          <!-- User Account Menu -->
           <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- The user image in the navbar-->
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+
               <span class="hidden-xs">最强小组</span>
             </a>
             <ul class="dropdown-menu">
-              <!-- The user image in the menu -->
               <li class="user-header">
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
@@ -82,7 +71,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </p>
               </li>
 
-              <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">信息</a>
@@ -97,23 +85,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
     </nav>
   </header>
-  <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
 
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">显示标注点</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>雨量站</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>积水点</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>视频点</span></a></li>
+        <li class="active" id="rainFallShow"><a href="#"><i class="fa fa-link"></i> <span>雨量站</span></a></li>
+        <li><a href="#" id="waterPointShow"><i class="fa fa-link"></i> <span>积水点</span></a></li>
+        <li><a href="#" id="videoPointShow"><i class="fa fa-link"></i> <span>视频点</span></a></li>
 
       </ul>
-      <!-- /.sidebar-menu -->
     </section>
-    <!-- /.sidebar -->
   </aside>
 
   <!-- TODO：地图放在这里 -->
@@ -121,24 +104,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div id="allmap"></div>
 
   </div>
-  <!-- /.content-wrapper -->
 
-  <!-- Main Footer -->
   <footer class="main-footer">
-    <!-- To the right -->
     <div class="pull-right hidden-xs">
       北京交通大学软件实训II
     </div>
-    <!-- Default to the left -->
     <strong>软件实训2  <a href="#">软件工程7班最强小组</a>.</strong> 防汛自动监测系统.
   </footer>
 
 
 
 </div>
-<!-- ./wrapper -->
 
-<!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -147,21 +124,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <script type="text/javascript">
-	// 百度地图API功能
-	var map = new BMap.Map("allmap");    // 创建Map实例
-	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-	//添加地图类型控件
-	map.addControl(new BMap.MapTypeControl({
-		mapTypes:[
-            BMAP_NORMAL_MAP,
-            BMAP_HYBRID_MAP
-        ]}));	  
-	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-</script>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
+</script>
+<script src="Script/function.js"></script>
+<script src="Script/init.js"></script>
 </body>
 </html>

@@ -1,10 +1,6 @@
 ﻿@charset "utf-8";
 /* CSS Document */
-/***
- * uimaker
- * http://www.uimaker.com
- * e-mail: admin@uimaker.com
- */
+
 *{font-size:9pt;border:0;margin:0;padding:0;}
 body{font-family:'微软雅黑'; margin:0 auto;min-width:980px;}
 ul{display:block;margin:0;padding:0;list-style:none;}
@@ -22,6 +18,9 @@ h2{font-weight:normal;}
 #mainBody {width:100%;height:100%;position:absolute;z-index:-1;}
 .cloud {position:absolute;top:0px;left:0px;width:100%;height:100%;background:url(../images/cloud.png) no-repeat;z-index:1;opacity:0.5;}
 #cloud2 {z-index:2;}
+#cloud3 {z-index:3;}
+#cloud4 {z-index:4;}
+
 
 
 /*login*/
@@ -33,15 +32,15 @@ h2{font-weight:normal;}
 .logintop ul li a:hover{color:#fff;}
 .loginbody{background:url(../images/loginbg3.png) no-repeat center center; width:100%; height:585px; overflow:hidden; position:absolute; top:47px;}
 .systemlogo{background:url(../images/loginlogo.png) no-repeat center;width:100%; height:71px; margin-top:75px;}
-.loginbox{width:692px; height:336px; background:url(../images/logininfo.png) no-repeat; margin-top:30px;}
+.loginbox{width:692px; height:336px; background:url(../images/) no-repeat; margin-top:30px;}
 .loginbox ul{margin-top:88px; margin-left:285px;}
 .loginbox ul li{margin-bottom:25px;}
 .loginbox ul li label{color:#4b4343; padding-left:25px;}
-.loginbox ul li label a{color:#4b4343;}
+.loginbox ul li label a{color:#ffffff;}
 .loginbox ul li label a:hover{color:#f0580c;}
-.loginbox ul li label input{margin-right:5px;}
+.loginbox ul li label input{margin-right:5px;} 
 .loginbox,.loginbox1,.loginbox2,.loginbox3,.loginbox4{width:692px; height:373px;margin-top:30px;}
-.loginuser{width:299px; height:48px; background:url(../images/loginuser.png) no-repeat; border:none; line-height:48px; padding-left:44px; font-size:14px; font-weight:bold;}
+.loginuser{width:299px; height:48px; background:url(../images/loginuser.png) no-repeat; border:none; line-height:80px; padding-left:44px; font-size:14px; font-weight:bold;}
 .loginpwd{width:299px; height:48px; background:url(../images/loginpassword.png) no-repeat; border:none;line-height:48px; padding-left:44px; font-size:14px; color:#de9852;}
 .loginbtn{width:111px;height:35px; background:url(../images/buttonbg.png) repeat-x; font-size:14px; font-weight:bold; color:#fff;cursor:pointer; line-height:35px;}
 .loginbm{height:50px; line-height:50px; text-align:center; background:url(../images/loginbg2.png) repeat-x;position:absolute; bottom:0; width:100%; color:#fff8f5;}

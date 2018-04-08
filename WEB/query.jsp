@@ -1,13 +1,11 @@
-<!-- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
- -->
- <!DOCTYPE html>
- 
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -224,7 +222,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</c:choose>
 				 					</select>
 				</li> -->
-				<br><br><br>
 				<li><label>根据开始时间查询</label>
 					&nbsp;从&nbsp;
 					<input class="scinput" id="cla_starttime1" name="cla_starttime1" type="text" value="${cla_starttime1 }" />
@@ -233,7 +230,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<input class="scinput" id="cla_starttime2" name="cla_starttime2" type="text" value="${cla_starttime2 }" />
 					<img onclick="WdatePicker({el:'cla_starttime2'})" src="My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle">
 				</li>
-				<br><br><br>
 				<li><label>根据结束时间查询</label>
 					&nbsp;从&nbsp;
 					<input class="scinput" id="cla_starttime1" name="cla_starttime1" type="text" value="${cla_starttime1 }" />
@@ -244,7 +240,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</li>	
 				<li><input type="button" class="scbtn" value="查询" onClick="doSubmit(1)" /></li>
 			</ul>
-			<br><br><br>
+			
 			<c:if test="${method =='query' }">
 			
 				<ul style="text-align: right;" class="toolbar" >

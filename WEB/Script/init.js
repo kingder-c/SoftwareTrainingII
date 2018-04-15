@@ -5,9 +5,12 @@ $(function () {
 function StartApp() {
     initMap()
     initEvent()
+    initApp()
 
 }
-
+function initApp(){
+    $('.js-example-basic-single').select2();
+}
 function initMap() {
     // 百度地图API功能
     map = new BMap.Map("allmap");    // 创建Map实例（强制全局）
@@ -40,5 +43,8 @@ function initEvent() {
 
         }
 
+    })
+    $("#infoQuery").click(function(){
+        $('#unModel').modal('show');
     })
 }

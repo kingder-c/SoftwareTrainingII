@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,162 +11,245 @@
   <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link rel="stylesheet" href="Style/index.css">
 
-        <style type="text/css">
-          body, html,#allmap {width: 100%;height: 840px;overflow: hidden;margin:0;font-family:"微软雅黑";}
-          </style>
-          <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pWn9b8IKhbpS9dUwC9T1Cy3PVU5zNnaX"></script>
+  <style type="text/css">
+    body,
+    html,
+    #allmap {
+      width: 100%;
+      height: 840px;
+      overflow: hidden;
+      margin: 0;
+      font-family: "微软雅黑";
+    }
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pWn9b8IKhbpS9dUwC9T1Cy3PVU5zNnaX"></script>
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- 头部 -->
-  <header class="main-header">
+    <!-- 头部 -->
+    <header class="main-header">
 
-    <!-- Logo -->
-    <a href="#" class="logo">
-      <span class="logo-lg"><b>防汛自动监测系统</b></span>
-    </a>
-
-    <nav class="navbar navbar-static-top" role="navigation">
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo-lg">
+          <b>防汛自动监测系统</b>
+        </span>
       </a>
-      <!-- 左侧面板 -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+
+      <nav class="navbar navbar-static-top" role="navigation">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- 左侧面板 -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
             <li class="dropdown messages-menu">
-                <!-- 信息查询 -->
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-suitcase"></i>&nbsp;工单派发
-                </a>
-              </li>
-              
-          <li class="dropdown messages-menu">
-            <!-- 信息查询 -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-info-circle"></i>&nbsp;信息查询
-            </a>
-          </li>
-          <li class="dropdown notifications-menu">
-            <!-- 数据统计 -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>&nbsp;数据统计
-            </a>
-          </li>
+              <!-- 工单派发 -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-suitcase"></i>&nbsp;工单派发
+              </a>
+            </li>
 
-          <li class="dropdown tasks-menu">
-            <!-- 信息管理 -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>&nbsp;信息管理
-            </a>
-          </li>
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+            <li class="dropdown messages-menu" data-toggle="modal" data-target=".bs-example-modal-lg">
+              <!-- 信息查询 -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="infoQuery">
+                <i class="fa fa-info-circle"></i>&nbsp;信息查询
+              </a>
+            </li>
+            <li class="dropdown notifications-menu">
+              <!-- 数据统计 -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>&nbsp;数据统计
+              </a>
+            </li>
 
-              <span class="hidden-xs">葱局长</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            <li class="dropdown tasks-menu">
+              <!-- 信息管理 -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-flag-o"></i>&nbsp;信息管理
+              </a>
+            </li>
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
 
-                <p>
+                <span class="hidden-xs">葱局长</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                  <p>
                     葱菊长 - 系统管理员
-                  <small>上次登录时间2018/03/20</small>
-                </p>
-              </li>
+                    <small>上次登录时间2018/03/20</small>
+                  </p>
+                </li>
 
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">信息</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">登出</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <aside class="main-sidebar">
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">信息</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">登出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
 
-    <section class="sidebar">
+      <section class="sidebar">
 
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">显示标注点</li>
-        <li id="rainFallShow"><a href="#"><i class="fa fa-soundcloud"></i> <span>雨量站</span></a></li>
-        <li id="waterShow"><a href="#"><i class="fa fa-thermometer-1"></i> <span>积水点</span></a></li>
-        <li id="videoShow"><a href="#"><i class="fa fa-video-camera"></i> <span>视频点</span></a></li>
-        <li id="videoShow"><a href="#"><i class="fa fa-video-camera"></i> <span>收水泵站</span></a></li>
-        <li class="header">分析展示</li>
-        <li id="rainFallPic"><a href="#"><i class="fa fa-cloud"></i> <span>雨量热图</span></a></li>
-        <li id="waterPointPic"><a href="#"><i class="fa fa-thermometer-1"></i> <span>积水热图</span></a></li>
-        <li id="videoPointPic"><a href="#"><i class="fa fa-bar-chart-o"></i> <span>物联网图</span></a></li>
-        <li class="header">地图服务</li>
-        <li><a href="#"><i class="fa fa-cloud"></i> <span>清屏</span></a></li>
-        <li class="active treeview menu-open">
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">显示标注点</li>
+          <li id="rainFallShow">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>地图操作</span>
+              <i class="fa fa-soundcloud"></i>
+              <span>雨量站</span>
+            </a>
+          </li>
+          <li id="waterShow">
+            <a href="#">
+              <i class="fa fa-thermometer-1"></i>
+              <span>积水点</span>
+            </a>
+          </li>
+          <li id="videoShow">
+            <a href="#">
+              <i class="fa fa-video-camera"></i>
+              <span>视频点</span>
+            </a>
+          </li>
+          <li id="videoShow">
+            <a href="#">
+              <i class="fa fa-video-camera"></i>
+              <span>收水泵站</span>
+            </a>
+          </li>
+          <li class="header">分析展示</li>
+          <li id="rainFallPic">
+            <a href="#">
+              <i class="fa fa-cloud"></i>
+              <span>雨量热图</span>
+            </a>
+          </li>
+          <li id="waterPointPic">
+            <a href="#">
+              <i class="fa fa-thermometer-1"></i>
+              <span>积水热图</span>
+            </a>
+          </li>
+          <li id="videoPointPic">
+            <a href="#">
+              <i class="fa fa-bar-chart-o"></i>
+              <span>物联网图</span>
+            </a>
+          </li>
+          <li class="header">地图服务</li>
+          <li>
+            <a href="#">
+              <i class="fa fa-cloud"></i>
+              <span>清屏</span>
+            </a>
+          </li>
+          <li class="active treeview menu-open">
+            <a href="#">
+              <i class="fa fa-dashboard"></i>
+              <span>地图操作</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu" style="">
-              <li><a href="#"><i class="fa fa-circle-o"></i> 放大</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> 缩小</a></li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> 放大</a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> 缩小</a>
+              </li>
             </ul>
           </li>
           <li class="active treeview menu-open">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>地图量测</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu" style="">
-                <li><a href="#"><i class="fa fa-circle-o"></i> 距离量算</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> 面积量算</a></li>
-              </ul>
-            </li>
+            <a href="#">
+              <i class="fa fa-dashboard"></i>
+              <span>地图量测</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="">
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> 距离量算</a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> 面积量算</a>
+              </li>
+            </ul>
+          </li>
 
-      </ul>
-    </section>
-  </aside>
+        </ul>
+      </section>
+    </aside>
 
-  <!-- TODO：地图放在这里 -->
-  <div class="content-wrapper">
+    <!-- TODO：地图放在这里 -->
+    <div class="content-wrapper">
       <div id="allmap"></div>
 
-  </div>
-
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      北京交通大学软件实训II
     </div>
-    <strong>软件实训2  <a href="#">软件工程7班最强小组</a>.</strong> 防汛自动监测系统.
-  </footer>
+
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        北京交通大学软件实训II
+      </div>
+      <strong>软件实训2
+        <a href="#">软件工程7班最强小组</a>.</strong> 防汛自动监测系统.
+    </footer>
+
+    <!--模态框-->
+    <div class="modal fade" tabindex="-1" role="dialog" id=unModel>
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">信息查询</h4>
+            </div>
+            <div class="modal-body">
+              <!-- 内容 -->
+              <iframe src="Page/HistoryQuery/History.html" frameborder="0" id="ModelFrame" style="height: 500px;width: 100%;"></iframe>
+            </div>
+
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
 
 
-</div>
 
 
-<!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- 百度地图加载EChart插件-->
-<script src="bower_components/BMap/bmap.js"></script>
-<script src="Script/init.js"></script>
-<script src="Script/function.js"></script>
+
+    <!-- jQuery 3 -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- 百度地图加载EChart插件-->
+    <!-- <script src="bower_components/BMap/bmap.js"></script> -->
+    <script src="Script/init.js"></script>
+    <script src="Script/function.js"></script>
 
 </body>
+
 </html>

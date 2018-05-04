@@ -22,7 +22,7 @@ th {
  font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
  color: #4f6b72;
  /*border-right: 1px solid #C1DAD7;*/
- border-right: 
+ border-right: none;
  border-bottom: 1px solid #C1DAD7;
  border-top: 1px solid #C1DAD7;
  letter-spacing: 2px;

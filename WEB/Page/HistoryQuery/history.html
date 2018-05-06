@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="history.css">
-    <title>历史查询</title>
+    <title>历史查询1</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.css"></link>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/select2/dist/js/select2.min.js"></script>
+
 </head>
+
 <body>
-    <header>
-    	<h4><img src="" alt="">历史查询</h4>
-		<ul>
-			<li><a class="qur" href="#">水位查询</a></li>
-			<li><a class="qur" href="#">我要查询</a></li>
-			<li><a class="qur" href="#">我不查询</a></li>
-			<li><a class="qur" href="#">查不查询</a></li>
-		</ul>
-    </header>
-    <section>
-		<nav>
-			
-			
-		</nav>
-    </section>
-    <section></section>
-    <footer></footer>
+
+    <span>关键字</span>
+    <input type="text" class="form-control" placeholder="关键字" aria-describedby="basic-addon2" style="width: 30%; display: initial">
+    <select class="js-example-basic-single" name="state">
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+    </select>
+
+
+
 </body>
+<script src="history.js"></script>
 </html>

@@ -1,0 +1,98 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%
+}
+body{
+	display: flex;
+	flex-flow: column;
+	background: url(../../images/TC_head.jpg);
+}
+/**********header***************/
+header{
+	height: 20px;
+	width: 100%;
+	line-height: 30px;
+	
+	padding-left: 20px;
+	flex-grow: 1;
+	color: #b9f;
+}
+
+p{
+	line-height: 50px;
+	font: 35px 微软雅黑;
+	text-shadow: 4px 4px 3px rgba(0,0,0,0.6);
+}
+
+
+
+
+/**********section***************/
+section{
+	flex-grow: 8;
+	
+	display: flex;
+	flex-flow: row;
+}
+nav{
+	background: rgba(240,145,145,0.1);
+	flex-grow: 0.5;
+	text-shadow: 4px 4px 3px rgba(0,0,0,0.6);
+}
+article{
+	background: rgba();
+	flex-grow: 9;
+}
+li a{
+	font: 15px 微软雅黑 ;
+	color: #fff;
+}
+li{
+	margin: 10px;
+}
+a{
+	text-decoration: none;   /*去掉下划线*/
+	/*color: #fff;*/
+
+}
+.pageTC:hover,.pageTC:active{
+	color: purple;
+}
+
+
+h4{
+	margin: 10px;
+	font: 20px 黑体 ;
+	color: #fff;
+
+}
+
+ul{
+	margin: 20px;
+
+	list-style-type: none;  /*去小圆点*/
+
+}
+
+/*iframe{
+	background: rgba(100,100,100,0.8);
+}*/
+
+
+
+
+
+
+/**********footer***************/
+footer{
+	height: 20px;
+	width: 100%;
+	line-height: 50px;
+	background: rgba(30,50,50,0);
+	padding-left: 20px;
+	flex-grow: 1;
+}

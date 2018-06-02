@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>ÀúÊ·²éÑ¯</title>
+    <title>ï¿½ï¿½Ê·ï¿½ï¿½Ñ¯</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function doInsertUser(){
 			var radioes = $("input[name='stu_id']:checked").val();
 			if (radioes == null || radioes == undefined){
-				alert("ÇëÑ¡ÖÐÒª¿ª»§µÄ¼ÍÂ¼£¡");return;
+				alert("ï¿½ï¿½Ñ¡ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â¼ï¿½ï¿½");return;
 			}else {
 				window.location.href = "<%=basePath%>UserServlet?method=addStudent&stu_id="+radioes;
 			}
@@ -58,15 +58,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function doDelete(){
 			var radioes = $("input[name='stu_id']:checked").val();
 			if (radioes == null || radioes == undefined){
-				alert("ÇëÑ¡ÖÐÒªÉ¾³ýµÄ¼ÍÂ¼£¡");return;
-			}else if (confirm("È·¶¨ÒªÉ¾³ýÑ¡¶¨µÄ¼ÇÂ¼Âð£¿\n")){
+				alert("ï¿½ï¿½Ñ¡ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ä¼ï¿½Â¼ï¿½ï¿½");return;
+			}else if (confirm("È·ï¿½ï¿½ÒªÉ¾ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ä¼ï¿½Â¼ï¿½ï¿½\n")){
 				window.location.href = "<%=basePath%>StudentServlet?method=dele&stu_id="+radioes;
 			}
 		}
 		function doUpdate(){
 			var radioes = $("input[name='stu_id']:checked").val();
 			if (radioes == null || radioes == undefined){
-				alert("ÇëÑ¡ÖÐÒªÐÞ¸ÄµÄ¼ÍÂ¼£¡");return;
+				alert("ï¿½ï¿½Ñ¡ï¿½ï¿½Òªï¿½Þ¸ÄµÄ¼ï¿½Â¼ï¿½ï¿½");return;
 			}else{
 				window.location.href = "<%=basePath%>StudentServlet?method=edit&stu_id="+radioes;
 			}
@@ -75,9 +75,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function doAdd(){
 			var radioes = $("input[name='stu_id']:checked").val();
 			if (radioes == null || radioes == undefined){
-				alert("ÇëÏÈÑ¡Ôñ£¡");return;
-			}else if (confirm("È·¶¨ÒªÑ¡¶¨Âð£¿\n")){
-				// ½«ÐèÒªµÄÖµ£¨Ñ§Ô±Id£©´«»Ø¸¸´°¿Ú£¬¹Ø±Õ×Ó´°¿Ú
+				alert("ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½");return;
+			}else if (confirm("È·ï¿½ï¿½ÒªÑ¡ï¿½ï¿½ï¿½ï¿½\n")){
+				// ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Öµï¿½ï¿½Ñ§Ô±Idï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Ø±ï¿½ï¿½Ó´ï¿½ï¿½ï¿½
 				var stu_id = radioes;
 				$.get("StudentServlet?method=getStudentByAjax&stu_id="+stu_id, "",callback,cancel);
 			}
@@ -95,18 +95,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <!-- ¶¥²¿Â·¾¶À¸ -->
+    <!-- ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ -->
 	<div class="place">
-		<span>Î»ÖÃ£º</span>
+		<span>Î»ï¿½Ã£ï¿½</span>
 		<ul class="placeul">
-			<li><a href="javascript:void(0)">²éÑ¯Ò³Ãæ</a></li>
-			<li><a href="javascript:void(0);">ÀúÊ·²éÑ¯</a></li>
+			<li><a href="javascript:void(0)">ï¿½ï¿½Ñ¯Ò³ï¿½ï¿½</a></li>
+			<li><a href="javascript:void(0);">ï¿½ï¿½Ê·ï¿½ï¿½Ñ¯</a></li>
 		</ul>
 	</div>
 	<div class="rightinfo">	
 		<form action="<%=basePath%>StudentServlet?method=${method}" method="post" id="search" name="search">
 		
-			<!-- Òþ²ØÓò -->
+			<!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -->
 			<div>
 				<input type="hidden" name="pageIndex" id="pageIndex" value="${currentPage }">
 				<input type="hidden" name=totalPage id="totalPage" value="${totalPage }">
@@ -115,18 +115,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="tools" >
 			
 			<ul class="seachform">
-				<li><label>¸ù¾ÝÕ¾µãÀàÐÍ²éÑ¯</label>
+				<li><label>ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½Í²ï¿½Ñ¯</label>
 					<input class="scinput" name="stu_name" type="text" value="${stu_name }" />
 				</li>
-				<li><label>¸ù¾ÝÕ¾µã±àºÅ²éÑ¯</label>
+				<li><label>ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½Å²ï¿½Ñ¯</label>
 					<select class="scinput" name="stu_graduation" type="text"/> 			
 						<c:choose>
 							<c:when test="${not empty stu_graduation }">
 								<option value=${stu_graduation } checked>${stu_graduation }</option>
-								<option value="">--Çå³ýÌõ¼þ--</option>
+								<option value="">--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½--</option>
 							</c:when>
 							<c:otherwise>
-								<option value="">--ÇëÑ¡Ôñ--</option>
+								<option value="">--ï¿½ï¿½Ñ¡ï¿½ï¿½--</option>
 							</c:otherwise>
 						</c:choose>
 						<c:forEach items="${select_stu_graduation }" var="stu">
@@ -142,18 +142,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</c:forEach>
  					</select>
 				</li>
-				<!-- <li><label>¸ù¾ÝËùÊô°à¼¶²éÑ¯</label>
+				<!-- <li><label>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à¼¶ï¿½ï¿½Ñ¯</label>
 					<select class="scinput" name="cla_name" />		
 						<c:choose>
 							<c:when test="${not empty cla_name }">
 								<option value=${cla_name } checked>${cla_name }</option>
-								<option value="">--Çå³ýÌõ¼þ--</option>
+								<option value="">--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½--</option>
 								<c:forEach items="${select_cla_idList }" var="cla">
 									<option value=${cla.cla_name } >-${cla.cla_name }-</option>
 								</c:forEach>
 							</c:when>
 							<c:otherwise>
-								<option value="">--ÇëÑ¡Ôñ--</option>
+								<option value="">--ï¿½ï¿½Ñ¡ï¿½ï¿½--</option>
 								<c:forEach items="${select_cla_idList }" var="cla">
 									<option value=${cla.cla_name } >-${cla.cla_name }-</option>
 								</c:forEach>
@@ -162,18 +162,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 				 					</select>
 				</li>
-				<%-- <li><label>¸ù¾ÝÊÚ¿Î½ÌÊ¦²éÑ¯</label>
+				<%-- <li><label>ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿Î½ï¿½Ê¦ï¿½ï¿½Ñ¯</label>
 					<select class="scinput" name="cla_master" />		
 						<c:choose>
 							<c:when test="${not empty cla_master }">
 								<option value=${cla_master } checked>${cla_master }</option>
-								<option value="">--Çå³ýÌõ¼þ--</option>
+								<option value="">--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½--</option>
 								<c:forEach items="${select_tea_name }" var="tea">
 									<option value=${tea.tea_name } >-${tea.tea_name }-</option>
 								</c:forEach>
 							</c:when>
 							<c:otherwise>
-								<option value="">--ÇëÑ¡Ôñ--</option>
+								<option value="">--ï¿½ï¿½Ñ¡ï¿½ï¿½--</option>
 								<c:forEach items="${select_tea_name }" var="tea">
 									<option value=${tea.tea_name } >-${tea.tea_name }-</option>
 								</c:forEach>
@@ -184,18 +184,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</li>	 --%>
 							</ul>
 							<ul class="seachform">
-				<li><label>¸ù¾ÝËùÑ§¿Î³Ì²éÑ¯</label>
+				<li><label>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½Î³Ì²ï¿½Ñ¯</label>
 					<select class="scinput" name="cou_name" />		
 						<c:choose>
 							<c:when test="${not empty cou_name }">
 								<option value=${cou_name } checked>--${cou_name }--</option>
-								<option value="">--Çå³ýÌõ¼þ--</option>
+								<option value="">--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½--</option>
 								<c:forEach items="${select_cou_name }" var="cou">
 									<option value=${cou.cou_name } >${cou.cou_name }</option>
 								</c:forEach>
 							</c:when>
 							<c:otherwise>
-								<option value="">--ÇëÑ¡Ôñ--</option>
+								<option value="">--ï¿½ï¿½Ñ¡ï¿½ï¿½--</option>
 								<c:forEach items="${select_cou_name }" var="cou">
 									<option value=${cou.cou_name } >${cou.cou_name }</option>
 								</c:forEach>
@@ -203,18 +203,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</c:choose>
 				 					</select>
 				</li>
-				<li><label>¸ù¾ÝÑ§Ô±×´Ì¬²éÑ¯</label>
+				<li><label>ï¿½ï¿½ï¿½ï¿½Ñ§Ô±×´Ì¬ï¿½ï¿½Ñ¯</label>
 					<select class="scinput" name="stu_state" />		
 						<c:choose>
 							<c:when test="${not empty stu_state }">
 								<option value=${stu_state } checked>${stu_state }</option>
-								<option value="">--Çå³ýÌõ¼þ--</option>
+								<option value="">--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½--</option>
 								<c:forEach items="${select_stu_state }" var="data">
 									<option value=${data.data_num } >-${data.data_name }-</option>
 								</c:forEach>
 							</c:when>
 							<c:otherwise>
-								<option value="">--ÇëÑ¡Ôñ--</option>
+								<option value="">--ï¿½ï¿½Ñ¡ï¿½ï¿½--</option>
 								<c:forEach items="${select_stu_state }" var="data">
 									<option value=${data.data_num } >-${data.data_name }-</option>
 								</c:forEach>
@@ -222,23 +222,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</c:choose>
 				 					</select>
 				</li> -->
-				<li><label>¸ù¾Ý¿ªÊ¼Ê±¼ä²éÑ¯</label>
-					&nbsp;´Ó&nbsp;
+				<li><label>ï¿½ï¿½ï¿½Ý¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½Ñ¯</label>
+					&nbsp;ï¿½ï¿½&nbsp;
 					<input class="scinput" id="cla_starttime1" name="cla_starttime1" type="text" value="${cla_starttime1 }" />
 					<img onclick="WdatePicker({el:'cla_starttime1'})" src="My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle">
-					&nbsp;µ½&nbsp;
+					&nbsp;ï¿½ï¿½&nbsp;
 					<input class="scinput" id="cla_starttime2" name="cla_starttime2" type="text" value="${cla_starttime2 }" />
 					<img onclick="WdatePicker({el:'cla_starttime2'})" src="My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle">
 				</li>
-				<li><label>¸ù¾Ý½áÊøÊ±¼ä²éÑ¯</label>
-					&nbsp;´Ó&nbsp;
+				<li><label>ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ñ¯</label>
+					&nbsp;ï¿½ï¿½&nbsp;
 					<input class="scinput" id="cla_starttime1" name="cla_starttime1" type="text" value="${cla_starttime1 }" />
 					<img onclick="WdatePicker({el:'cla_starttime1'})" src="My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle">
-					&nbsp;µ½&nbsp;
+					&nbsp;ï¿½ï¿½&nbsp;
 					<input class="scinput" id="cla_starttime2" name="cla_starttime2" type="text" value="${cla_starttime2 }" />
 					<img onclick="WdatePicker({el:'cla_starttime2'})" src="My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle">
 				</li>	
-				<li><input type="button" class="scbtn" value="²éÑ¯" onClick="doSubmit(1)" /></li>
+				<li><input type="button" class="scbtn" value="ï¿½ï¿½Ñ¯" onClick="doSubmit(1)" /></li>
 			</ul>
 			
 			<c:if test="${method =='query' }">
@@ -246,19 +246,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<ul style="text-align: right;" class="toolbar" >
 					<li>
 						<a href="javascript:void(0);" onclick="doInsert()">
-						<img alt="Ìí¼Ó" src="images/t01.png"><span style="margin-top: -2px;">Ìí¼Ó</span></a>
+						<img alt="ï¿½ï¿½ï¿½" src="images/t01.png"><span style="margin-top: -2px;">ï¿½ï¿½ï¿½</span></a>
 					</li>	 
 					<li>	
 						<a href="javascript:void(0);" onclick="doUpdate()">
-						<img alt="ÐÞ¸Ä" src="images/t02.png"><span style="margin-top: -2px;">ÐÞ¸Ä</span></a>
+						<img alt="ï¿½Þ¸ï¿½" src="images/t02.png"><span style="margin-top: -2px;">ï¿½Þ¸ï¿½</span></a>
 					</li>	 
 					<li>	
 						<a href="javascript:void(0);" onclick="doDelete()">
-						<img alt="É¾³ý" src="images/t03.png"><span style="margin-top: -2px;">É¾³ý</span></a>
+						<img alt="É¾ï¿½ï¿½" src="images/t03.png"><span style="margin-top: -2px;">É¾ï¿½ï¿½</span></a>
 					</li>
 					<!-- <li>
 						<a href="javascript:void(0);" onclick="doInsertUser()">
-						<img alt="¿ª»§" src="images/t01.png"><span style="margin-top: -2px;">¿ª»§</span></a>
+						<img alt="ï¿½ï¿½ï¿½ï¿½" src="images/t01.png"><span style="margin-top: -2px;">ï¿½ï¿½ï¿½ï¿½</span></a>
 					</li> -->
 				</ul>
 			</c:if>
@@ -269,23 +269,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
 			<thead>
 				<tr>
-					<th width="4%">Õ¾µãÀàÐÍ</th>
-					<th width="10%">Õ¾µã±àºÅ</th>
-					<th width="7%">¿ªÊ¼Ê±¼ä</th>
-					<th width="5%">½áÊøÊ±¼ä</th>
+					<th width="4%">Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+					<th width="10%">Õ¾ï¿½ï¿½ï¿½ï¿½</th>
+					<th width="7%">ï¿½ï¿½Ê¼Ê±ï¿½ï¿½</th>
+					<th width="5%">ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½</th>
 					<!-- <th width="20%"></th>
 					<th width="20%">×¨Òµ</th> -->
 					<!-- <th width="5%"></th> -->
-					<th width="10%">ÁªÏµµç»°</th>
+					<th width="10%">ï¿½ï¿½Ïµï¿½ç»°</th>
 					<th width="auto%"></th>
 					<!-- <th width="8%">Ä¿Ç°×´Ì¬</th>
-					<th width="auto">¹ØÁªÕËºÅ</th> -->
+					<th width="auto">ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½</th> -->
 				</tr>
 			</thead>
-			<!-- EL±í´ïÊ½ÖÐ emptyÎª¹Ø¼ü×Ö ÓÃÀ´ÅÐ¶Ï¶ÔÏóÊÇ·ñÎª¿Õ -->
+			<!-- ELï¿½ï¿½ï¿½Ê½ï¿½ï¿½ emptyÎªï¿½Ø¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ï¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ -->
 			<c:if test="${empty stuvList}">
 				<tr class="odd">
-					<td colspan="11" align="center">Ã»ÓÐ²éÑ¯µ½Ïà¹Ø¼ÇÂ¼£¡</td>
+					<td colspan="11" align="center">Ã»ï¿½Ð²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½Â¼ï¿½ï¿½</td>
 				</tr>
 			</c:if>
 			<c:forEach items="${stuvList }" var="stuvBean">
@@ -328,17 +328,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			style="table-layout:fixed;word-wrap:break-word;word-break:break-all;">
 			<thead>
 				<tr>
-					<th width="8%">Õ¾µãÀàÐÍ</th>
-					<th width="7%">Õ¾µã±àºÅ</th>
-					<th width="8%">¿ªÊ¼Ê±¼ä</th>
-					<th width="8%">½áÊøÊ±¼ä</th>
+					<th width="8%">Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+					<th width="7%">Õ¾ï¿½ï¿½ï¿½ï¿½</th>
+					<th width="8%">ï¿½ï¿½Ê¼Ê±ï¿½ï¿½</th>
+					<th width="8%">ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½</th>
 					
 				</tr>
 			</thead>
-			<!-- EL±í´ïÊ½ÖÐ emptyÎª¹Ø¼ü×Ö ÓÃÀ´ÅÐ¶Ï¶ÔÏóÊÇ·ñÎª¿Õ -->
+			<!-- ELï¿½ï¿½ï¿½Ê½ï¿½ï¿½ emptyÎªï¿½Ø¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ï¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ -->
 			<c:if test="${empty stuvList}">
 				<tr class="odd">
-					<td colspan="11" align="center">Ã»ÓÐ²éÑ¯µ½Ïà¹Ø¼ÇÂ¼£¡</td>
+					<td colspan="11" align="center">Ã»ï¿½Ð²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½Â¼ï¿½ï¿½</td>
 				</tr>
 			</c:if>
 			<c:forEach items="${stuvList }" var="stuvBean">
@@ -377,48 +377,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</table>	
 		</c:if>
 
-		<!-- ·ÖÒ³¹¦ÄÜ ¿ªÊ¼ -->
+		<!-- ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê¼ -->
 		<div class="pagin">
 			<div>
-				¹²&nbsp;<i class="blue">${totalNum }</i>&nbsp;Ìõ¼ÇÂ¼£¬µ±Ç°ÏÔÊ¾µÚ&nbsp;<i
-					class="blue">${currentPage }&nbsp;</i>Ò³&nbsp;/&nbsp;¹²&nbsp;<i
+				ï¿½ï¿½&nbsp;<i class="blue">${totalNum }</i>&nbsp;ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ê¾ï¿½ï¿½&nbsp;<i
+					class="blue">${currentPage }&nbsp;</i>Ò³&nbsp;/&nbsp;ï¿½ï¿½&nbsp;<i
 					class="blue">${totalPage }&nbsp;</i>Ò³&nbsp;&nbsp;
-				Ìøµ½&nbsp;µÚ&nbsp;<input class="goPage" type="text" id="goPage"
+				ï¿½ï¿½ï¿½ï¿½&nbsp;ï¿½ï¿½&nbsp;<input class="goPage" type="text" id="goPage"
 					name="goPage" value="${currentPage }">&nbsp;Ò³&nbsp;&nbsp; <input
-					type="button" value="Ìø×ª" onclick="goPage()">
+					type="button" value="ï¿½ï¿½×ª" onclick="goPage()">
 			</div>
 			<div class="paginList">
 				<c:if test="${currentPage == 1 }">
-					<a href="javascript:void(0);">Ê×Ò³</a>&nbsp;
-					<a href="javascript:void(0);">ÉÏÒ»Ò³</a>&nbsp;
+					<a href="javascript:void(0);">ï¿½ï¿½Ò³</a>&nbsp;
+					<a href="javascript:void(0);">ï¿½ï¿½Ò»Ò³</a>&nbsp;
 				</c:if>
 				<c:if test="${currentPage > 1 }">
-					<a class="blue" href="javascript:void(0);" onClick="doSubmit(1)">Ê×Ò³</a>&nbsp;
+					<a class="blue" href="javascript:void(0);" onClick="doSubmit(1)">ï¿½ï¿½Ò³</a>&nbsp;
 					<a class="blue" href="javascript:void(0);"
-						onClick="doSubmit(${currentPage-1})">ÉÏÒ»Ò³</a>&nbsp;
+						onClick="doSubmit(${currentPage-1})">ï¿½ï¿½Ò»Ò³</a>&nbsp;
 				</c:if>
 				<c:if test="${currentPage >= totalPage }">
-					<a href="javascript:void(0);">ÏÂÒ»Ò³</a>&nbsp;
+					<a href="javascript:void(0);">ï¿½ï¿½Ò»Ò³</a>&nbsp;
 					<a href="javascript:void(0);">Î²Ò³</a>&nbsp;
 				</c:if>
 				<c:if test="${currentPage < totalPage }">
 					<a class="blue" href="javascript:void(0);"
-						onClick="doSubmit(${currentPage+1 })">ÏÂÒ»Ò³</a>&nbsp;
+						onClick="doSubmit(${currentPage+1 })">ï¿½ï¿½Ò»Ò³</a>&nbsp;
 					<a class="blue" href="javascript:void(0);"
 						onClick="doSubmit(${totalPage})">Î²Ò³</a>&nbsp;
 				</c:if>
 			</div>
 		</div>
-		<!-- ·ÖÒ³¹¦ÄÜ ¿ªÊ¼ -->
+		<!-- ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê¼ -->
 		<c:if test="${method =='selectStudent' }">
 				<table>
 				<tr style="line-height:50px; ">
-					<!-- °´Å¥»»³É±³¾°Í¼Æ¬ -->
+					<!-- ï¿½ï¿½Å¥ï¿½ï¿½ï¿½É±ï¿½ï¿½ï¿½Í¼Æ¬ -->
 					<td>&nbsp;</td>
 					<td colspan="1" align="center"><input class="button"
-						type="button" name="È·ÈÏ" value="È·ÈÏ" onClick="doAdd()" />
+						type="button" name="È·ï¿½ï¿½" value="È·ï¿½ï¿½" onClick="doAdd()" />
 					&nbsp;&nbsp;&nbsp;&nbsp;<input class="button"
-						type="button" name="·µ»Ø" value="·µ»Ø" onClick="cancel()"/>
+						type="button" name="ï¿½ï¿½ï¿½ï¿½" value="ï¿½ï¿½ï¿½ï¿½" onClick="cancel()"/>
 					</td><td colspan="3">&nbsp;</td>
 				</tr>
 				</table>

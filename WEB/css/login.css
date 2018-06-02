@@ -1,93 +1,40 @@
-@charset "utf-8";
-html,body,div,p,form,label,ul,li,dl,dt,dd,ol,img,
-button,b,em,strong,small,h1,h2,h3,h4,h5,h6{
-	margin:0;
-	padding:0;
-	border:0;
-	list-style:none;
-	font-style:normal;
-	overflow-y: auto; 
-	/*text-align: center;*/
-}
-body{
-	font-family:SimHei,'Helvetica Neue',Arial,'Droid Sans',sans-serif;
-	font-size:14px;
-	color:#333;background:#f2f2f2;
+/*通用*/
+html{height:100%;}
+*{ margin:0; padding:0;}
+body{font:14px "microsoft yahei", Arial, Helvetica, sans-serif;color:#000; background:#FFF; height:100%; min-height:670px;}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd {margin:0px;padding:0px;border:none;list-style:none;}
+a{text-decoration:none;  text-shadow:none;font-weight:normal;}
+ul{list-style:none;}
+textarea,input,button,select,textarea{outline:none;-webkit-appearance:none; font-family:"微软雅黑";}
+.fl{ float:left;}
+.fr{ float:right}
+a{color:#6c6c6c;text-decoration:none;}
+img{border:none;}
+.clear{ clear:both; height:0; overflow:hidden;}
+.dk{ width:1200px; margin:0 auto; }
 
-}
+/****************登录注册****************/
+.Login{ background:url(../images/background01.jpg) no-repeat center; background-size:1920px auto; min-width:1200px; position:relative;}
 
-
-
-a, a.link{
-	color:#666;
-	text-decoration:none;
-	font-weight:500;
-}
-a, a.link:hover{
-	color:#666;
-}
-h1,h2,h3,h4,h5,h6{
-	font-weight: normal;
-}
-
-.login{
-	width:100%;
-	height:100%;
-	background:url(../images/login-bg.png) no-repeat;
-	background-size:cover;
-	position:fixed;
-	z-index:-10;
-	/*align:center;*/
-	/*margin-left: 100px;*/
-
-}
-.welcome{
-	width:100%;
-	margin:10% 0;
-}
-.welcome img{
-	width:80%;
-	/*height:100px;*/
-	margin-left: 130px; 
-}
-.login-inp{
-	width: 50%;
-	margin:0 30px 15px 30px;
-	border:1px solid #fff;
-	border-radius:25px;
-}
-.login-inp label{
-	width:3em;
-	text-align:center;
-	display:inline-block;
-	color:#fff;
-}
-.login-inp input{
-	line-height:40px;
-	color:#fff;
-	background-color:transparent;
-	border:none;outline: none;
-}
-.login-inp a{
-	display:block;
-	width:100%;
-	text-align:center;
-	line-height:40px;
-	color:#fff;
-	font-size:16px;
-	letter-spacing:5px;
-
-}
-.login-txt{
-	text-align:center;
-	color:#fff;
-}
-
-.login-txt a{
-	color:#fff;
-	padding:0 5px;
-}
-
-.login-form{
-	margin-left: 400px; 
-}
+.Login_heand{ padding-top:70px; }
+.Login_logo{ height:49px; color:#FFF; font-size:22px; font-weight:600; display:block;}
+.Login_logo p{ padding-top:17px; margin-left:20px;}
+a.Login_down{ font-size:12px; color:#FFF;padding-top:28px;}
+.Login_k{ padding-left:57%; width:43%; min-width:515px; margin-top:130px;}
+.Login_T{ border-bottom:1px solid #6092ce; color:#FFF; font-size:16px; position:relative; padding:10px 0;}
+.Login_T p{ position:absolute; background:#00b4ff; height:2px; width:60px; bottom:-1px; left:0;}
+.Login_dl{ width:334px; padding-top:10px;}
+.Login_row{background:rgba(255,255,255,0.15); border:1px solid #FFF; border-radius:3px; margin-top:30px; height:52px; width:332px;}
+.Login_input{ padding-left:62px; padding-right:20px; width:250px; color:#FFF; font-size:14px; background:none; border:none;height:52px; line-height:52px;}
+.Login_inp1{ background:url(../images/icon_01.png) no-repeat 20px center;}
+.Login_inp2{ background:url(../images/icon_02.png) no-repeat 20px center;}
+input.Login_input::-webkit-input-placeholder {color: #FFF;}
+a.Login_dla{ background:#00aeff;width:334px;border-radius:3px;margin-bottom:30px;height:52px;line-height:52px; font-size:14px; color:#FFF; text-align:center; display:block; margin-top:25px;}
+a.Login_dla:hover{ text-shadow:0 0 5px #FFF;}
+.Login_pitch{display:block;line-height:20px; font-size:14px; color:#FFF;}
+.Login_pitch input[type="checkbox"] {-webkit-appearance:none;width:16px; height:16px;vertical-align: middle;display:block;outline:none; border:1px solid #FFF; border-radius:2px;overflow:hidden;margin-right:15px; margin-top:2px;}
+.Login_pitch input[type="checkbox"]:checked{background:url(../images/icon_dh.png) no-repeat center; background-size:16px; }
+.Login_wj{ width:200px; font-size:14px; line-height:20px; color:#b4b4b4; text-align:right;}
+.Login_wj a{ color:#b4b4b4;}
+.Login_wj a:hover{ color:#FFF;}
+.Login_foot{ font-size:12px; color:#FFF; width:1200px; position:absolute; bottom:15px; left:50%; margin-left:-600px; line-height:20px;}

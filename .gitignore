@@ -1,1 +1,5 @@
 .DS_Store
+*.sqlite
+.vs/SoftwareTrainingII/v15/.suo
+.vs/VSWorkspaceState.json
+*.sqlite

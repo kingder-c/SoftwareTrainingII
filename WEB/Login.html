@@ -1,21 +1,49 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<title>无标题文档</title>
-<link rel="stylesheet" href="css/login.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>城市防汛系统</title>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
 </head>
+<body class="Login">
+<!--Login-开始-->
 
-<body>
-<div class="login" style="center">
-	<div class="welcome"><img src="images/welcome.png"></div>
-	<div class="login-form">
-		<div class="login-inp"><label>登录</label><input type="text" placeholder=""></div>
-		<div class="login-inp"><label>密码</label><input type="password" placeholder=""></div>
-		<div class="login-inp"><a href="#" >立即登录</a></div>
-	</div>
-	<div class="login-txt"><a href="#">立即注册</a>|<a href="#">忘记密码？</a></div>
+<div class="Login_heand dk">
+    <a href="#" class="Login_logo fl">
+        <img src="images/logo.png" class="fl"/><p class="fl">城市防汛系统</p><div class="clear"></div>
+    </a>
+    <!-- <a href="#" class="Login_down fr">谷歌浏览器下载</a><div class="clear"></div> -->
 </div>
+
+<div class="Login_k">
+	<div class="Login_T">密码登录<p></p></div>
+    <!--登录-开始-->
+    <form class="Login_dl">
+        <div class="Login_row">
+            <input name="zhanghao" type="text" value="" class="Login_input Login_inp1" placeholder="用户名" />
+        </div> 
+        <div class="Login_row">
+            <input name="password" type="password" value="" class="Login_input Login_inp2" placeholder="密码" />
+        </div> 
+        <a href="#" class="Login_dla">登录</a>
+        
+        <label class="Login_pitch fl">
+        	<input type="checkbox" name="checkbox01" class=" fl" /><div class="fl">自动登录</div><div class="clear"></div>
+        </label>
+        <div class="Login_wj fr">
+        	<a href="#">忘记密码</a>&nbsp;&nbsp;
+        </div><div class="clear"></div>
+
+   </form>
+    <!--登录-结束-->
+</div>
+
+<div class="Login_foot">
+	<p>京ICP备xxxxxxxx号-4 / 京ICP证xxxxxxxx号 北京市公安局海淀分局</p>
+    <p>本站由北京交通大学 | 宇宙最棒小组技术支持</p>
+</div>
+<!--Login-结束-->
+    
 </body>
 </html>

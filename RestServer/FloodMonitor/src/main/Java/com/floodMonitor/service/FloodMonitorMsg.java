@@ -11,4 +11,5 @@ public interface FloodMonitorMsg {
     HistoryInfo findHistoryInfoById(Integer id);
     MonitorStatus findMonitorStatusById(Integer id);
     PointInfo findPointInfoById(Integer id);
+    PointInfo findPointInfoByMonitorType(String type);
 }

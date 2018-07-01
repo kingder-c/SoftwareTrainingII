@@ -8,10 +8,12 @@ import com.floodMonitor.pojo.MonitorStatus;
 import com.floodMonitor.pojo.PointInfo;
 import com.floodMonitor.service.FloodMonitorMsg;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by zhuyao on 2018/05/17.
  */
+@Service
 public class FloodMonitorMsgImpl implements FloodMonitorMsg {
 
     @Autowired
@@ -34,5 +36,11 @@ public class FloodMonitorMsgImpl implements FloodMonitorMsg {
     @Override
     public PointInfo findPointInfoById(Integer id) {
         return pointInfoMapper.findById(1);
+    }
+
+    @Override
+    public PointInfo findPointInfoByMonitorType(String type) {
+        PointInfo pointInfo = pointInfoMapper.findByTpye(type);
+        return pointInfo;
     }
 }

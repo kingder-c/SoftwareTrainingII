@@ -8,6 +8,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findById" parameterType="Integer" resultType="PointInfo">
 		select * from tbl_monitoring_point_info where id = #{v}
 	</select>
+
+    <select id="findByTpye" parameterType="String" resultType="PointInfo">
+		select * from tbl_monitoring_point_info where monitorType = #{v}
+	</select>
 	
 	<!-- //根据用户名称模糊查询用户列表
 	#{}    select * from user where id = ？    占位符  ? ==  '五'
